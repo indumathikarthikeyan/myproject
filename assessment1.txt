@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<title>testyu</title>
+<style>
+body{
+background-color:beige;}
+h1{
+font-size:50px;
+font-family:sofia;
+text-align:center;
+}
+#box{
+width:60%;
+height:450px;
+margin:auto;
+border:2px solid blue;
+box-shadow:0 0 5px blue;
+border-radius:10px;
+}
+#word{
+width:70%;
+height:420px;
+outline:none;
+background-color:transparent;
+float:left;
+resize:none;
+font-family:sofia;
+font-size:18px;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  }
+.button1 {background-color: #4CAF50;} 
+</style>
+</head>
+<body>
+<body>
+<h1>user input</h1>
+<div id="box">
+<textarea id="word" ></textarea>
+<br>
+<button type="button" class="button button1" onclick="countWord()">count</button>
+<br>
+<br>
+<br>
+<textarea span id="show">
+</textarea>
+</div>
+<script>
+function countWord(){
+var words=document.getElementById("word").value;
+var count=0;
+var i;
+var split=words.split(' ');
+for(i=0;i<split.length;i++){
+if(split[i] !=""){
+count +=1;
+}
+}
+document.getElementById("show").innerHTML = count;
+}
+</script>
+</body>
+</html>
